@@ -14,6 +14,11 @@ const App = () => {
     "?"
   ])
 
+  const handleGamePlay = (clickedSquare) => {
+     let updateBoard = [...board]
+     updateBoard[clickedSquare] = "🌴"
+     setBoard(updateBoard)
+  }
   return (
     <>
       <h1>Treasure Hunt Game</h1>
