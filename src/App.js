@@ -14,6 +14,7 @@ const App = () => {
     "?"
   ])
 
+
   const handleGamePlay = (clickedSquare) => {
      let updateBoard = [...board]
      updateBoard[clickedSquare] = "🌴"
@@ -23,9 +24,9 @@ const App = () => {
     <>
       <h1>Treasure Hunt Game</h1>
       <div className="board">
-        {board.map(square => {
+        {board.map((square, index) => {
         return(
-        <Square square={square}/>
+        <Square square={square} index={index} handleGamePlay={handleGamePlay}/>
         )
       })}
       
